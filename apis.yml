@@ -1,23 +1,60 @@
 aid: atomic-canyon
+
 name: Atomic Canyon
-description: 'Atomic Canyon is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://atomiccanyon.com/wp-content/uploads/2024/01/facebook.png
+
+description: 'Atomic Canyon provides a platform focused on data consent and privacy management, enabling users to control data sharing preferences across web services. The site offers tools for consent preferences, basic operations, content personalization, and site optimization, ensuring compliance with privacy regulations and enhancing user trust. Through its services, Atomic Canyon aims to secure data access while delivering personalized experiences.'
+
 url: https://raw.githubusercontent.com/api-evangelist/atomic-canyon/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Data-Privacy
+- Consent-Management
+- Platform
+- API
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/atomic-canyon-hosts.yml
+- type: DomainSecurity
+  url: security/atomic-canyon-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.atomiccanyon.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI or other machine-readable contract found after probing known hosts.
+  evidence:
+    - url: https://api.atomiccanyon.com/openapi.json
+      status: 000
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
